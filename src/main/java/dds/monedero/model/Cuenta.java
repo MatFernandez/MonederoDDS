@@ -28,11 +28,13 @@ public class Cuenta {
 
   public void depositar(double monto) {
     this.validarDeposito(monto);
+    saldo = saldo + monto;
     this.agregarMovimiento(LocalDate.now(),monto,true);
   }
 
   public void extraer(double monto) {
     this.validarExtraccion(monto);
+    saldo = saldo - monto;
     this.agregarMovimiento(LocalDate.now(),monto,false);
   }
 
