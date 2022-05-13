@@ -26,28 +26,4 @@ public class Movimiento {
   public boolean isDeposito() {
     return esDeposito;
   }
-
-
-  //Entiendo que esto no es de utilidad en el codigo
-
-   /*public boolean fueDepositado(LocalDate fecha) {
-    return isDeposito() && esDeLaFecha(fecha);
-  }
-
-  public boolean fueExtraido(LocalDate fecha) {
-    return isExtraccion() && esDeLaFecha(fecha);
-  }
-
-  public boolean esDeLaFecha(LocalDate fecha) {
-    return this.fecha.equals(fecha);
-  }
-
-  public boolean isExtraccion() {
-    return !esDeposito;
-  }
-*/
-
-
-
-
 }

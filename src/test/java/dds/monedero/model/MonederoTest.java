@@ -15,17 +15,11 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class MonederoTest {
   private Cuenta cuenta;
   private Cuenta cuentaConSaldo;
-  private Movimiento movimiento1;
-  private Movimiento movimiento2;
-  private Movimiento movimiento3;
 
   @BeforeEach
   void init() {
     cuenta = new Cuenta();
     cuentaConSaldo = new Cuenta(4500);
-    movimiento1 = new Movimiento(LocalDate.now(),300,true);
-    movimiento2 = new Movimiento(LocalDate.now(),200,true);
-    movimiento3 = new Movimiento(LocalDate.now(), 500, false);
   }
 
 

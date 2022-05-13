@@ -22,9 +22,6 @@ public class Cuenta {
     saldo = montoInicial;
   }
 
-  public void setMovimientos(List<Movimiento> movimientos) {
-    this.movimientos = movimientos;
-  }
 
   public void depositar(double monto) {
     this.validarDeposito(monto);
@@ -55,9 +52,6 @@ public class Cuenta {
         .sum();
   }
 
-  public List<Movimiento> getMovimientos() {
-    return movimientos;
-  }
 
   public double getSaldo() {
     return saldo;
@@ -99,6 +93,5 @@ public class Cuenta {
   public double cantidadDeDepositosEnLosMovimientos(){
     return movimientos.stream().filter(movimiento -> movimiento.isDeposito()).count();
   }
-
 
 }
