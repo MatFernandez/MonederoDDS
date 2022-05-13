@@ -43,6 +43,11 @@ public class Cuenta {
     movimientos.add(movimiento);
   }
 
+  public double cantidadDeMovimientos(){
+    return movimientos.size();
+  }
+
+
   public double getMontoExtraidoA(LocalDate fecha) {
     return movimientos.stream()
         .filter(movimiento -> !movimiento.isDeposito() && movimiento.getFecha().equals(fecha))
