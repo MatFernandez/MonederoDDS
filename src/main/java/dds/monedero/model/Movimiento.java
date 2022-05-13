@@ -19,12 +19,18 @@ public class Movimiento {
   public double getMonto() {
     return monto;
   }
-
   public LocalDate getFecha() {
     return fecha;
   }
 
-  public boolean fueDepositado(LocalDate fecha) {
+  public boolean isDeposito() {
+    return esDeposito;
+  }
+
+
+  //Entiendo que esto no es de utilidad en el codigo
+
+   /*public boolean fueDepositado(LocalDate fecha) {
     return isDeposito() && esDeLaFecha(fecha);
   }
 
@@ -36,11 +42,12 @@ public class Movimiento {
     return this.fecha.equals(fecha);
   }
 
-  public boolean isDeposito() {
-    return esDeposito;
-  }
-
   public boolean isExtraccion() {
     return !esDeposito;
   }
+*/
+
+
+
+
 }

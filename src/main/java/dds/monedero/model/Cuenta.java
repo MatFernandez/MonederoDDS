@@ -73,7 +73,7 @@ public class Cuenta {
       throw new MontoNegativoException(monto);
     }
 
-    if (movimientos.stream().filter(movimiento -> movimiento.isDeposito()).count() >= 3) {
+    if (this.cantidadDeDepositosEnLosMovimientos() >= 3) {
       throw new MaximaCantidadDepositosException();
     }
   }
@@ -91,5 +91,14 @@ public class Cuenta {
       throw new MaximoExtraccionDiarioException(limite);
     }
   }
+
+  public double cantidadDeExtraccionesEnLosMovimientos(){
+    return movimientos.stream().filter(movimiento -> !movimiento.isDeposito()).count();
+  }
+
+  public double cantidadDeDepositosEnLosMovimientos(){
+    return movimientos.stream().filter(movimiento -> movimiento.isDeposito()).count();
+  }
+
 
 }
